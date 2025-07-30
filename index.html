@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rocky’s Pet Rock Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+  <div class="logo">🪨 PetRock</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#rockSection">Adopt</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <header class="hero fade-in">
+    <h1>🪨 Rocky’s Pet Rock Store</h1>
+    <p>Because even rocks deserve love.</p>
+    <a href="#rockSection" class="scroll-btn">Meet the Rocks </a>
+    <div class="scroll-down-indicator">↓</div>
+  </header>
+
+  <section class="rock-section fade-in" id="rockSection">
+  <button class="arrow-btn" id="prev">←</button>
+
+  <div class="rock-card" id="rockCard">
+    <!-- JS fills this -->
+  </div>
+
+  <button class="arrow-btn" id="next">→</button>
+</section>
+
+
+
+
+  <div class="modal hidden">
+    <div class="modal-content">
+      <h3>You adopted Grumpy Greg!</h3>
+      <p>He's thrilled. Probably.</p>
+      <button id="close-btn">Close</button>
+    </div>
+  </div>
+
+  <section id="about" class="fade-in" style="padding:100px 20px;">
+  <h2>About Us</h2>
+  <p>We believe in giving personality-less rocks a loving forever home.</p>
+    <p>
+      Ever wanted a friend who listens, judges silently, and doesn’t leave? Meet rocks.
+      They're low-maintenance, high-vibe companions. No barking. No ghosting.
+    </p>
+    <p>
+      Some say rocks are boring. We say: they’re solid. Emotionally. Physically.
+      Spiritually. They're there — always.
+    </p>
+    <p>
+      People have plants. You? You’ll have geological soulmates.
+    </p>
+    <p style="font-style: italic;">
+      Because sometimes, stillness is the loudest support.
+</section>
+
+<section id="contact" class="fade-in" style="padding:100px 20px;">
+  <h2>Contact</h2>
+  <p>Questions? Throw us a pebble at <a href="mailto:hello@petrock.store">hello@petrock.store</a></p>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

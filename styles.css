@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(to bottom, #ce94ee, #e0e0e0);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4e3b61;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd6ff;
+}
+
+/* Hero */
+.hero {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.scroll-btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ce94ee;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background: #b47fd3;
+}
+
+/* Rock Section */
+.rock-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  gap: 2rem;
+}
+
+.arrow-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #4e3b61;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.2);
+}
+
+.rock-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.rock-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.rock-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.rock-card p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.rock-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background: #4e3b61;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.rock-card button:hover {
+  background: #6b5194;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#close-btn {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #ce94ee;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#close-btn:hover {
+  background: #b47fd3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* About & Contact */
+
+
+/* Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.rock-section,
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section#about,
+section#contact {
+  background: white;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+section#about h2,
+section#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4e3b61;
+}
+section.visible,
+header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-down-indicator {
+  font-size: 2rem;
+  margin-top: 100px;
+  animation: bounce 1.5s infinite;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
